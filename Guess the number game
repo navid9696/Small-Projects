@@ -1,0 +1,18 @@
+import random
+print('Welcome in "GUESS THE NUMBER" game.\n\nPlease enter a range\n')
+min = int(input('Enter the lowest value: \n'))
+max = int(input('Enter the highest value: '))
+number = random.randint(min, max)
+print(50*'_','\n')
+print(f'Guess the number between {min} and {max}\n')
+attempts = 0
+while True:
+    guessed_number = int(input('Please, enter your number: '))
+    if guessed_number == number:
+        print(f'Good job, you made it in {attempts} attempts')
+        break
+    elif guessed_number < number:
+        print('Your number is LOWER than our random number, try again','\n')
+    else:
+        print('Your number is HIGHER than our random number, try again','\n')
+    attempts += 1
